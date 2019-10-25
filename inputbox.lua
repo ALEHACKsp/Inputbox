@@ -12,7 +12,7 @@ addEventHandler("onClientRender", getRootElement(), function()
 
         dxDrawRectangle(v[2] + 2, v[3] + v[5] - 4, (v[7][1] - 4) < 0 and 0 or (v[7][1] - 4), 2, tocolor(50, 168, 82, 180))
 
-        dxDrawText(v[6] and v[8] .. (getTickCount() - tick < 500 and "|" or "") or (v[8] == "" and v[1]) or v[8], v[2] + 6, v[3] + 6, v[2] + v[4] - 6, v[3] + v[5] - 6, tocolor(255, 255, 255, (v[6] or v[8] ~= "") and 200 or 100), 1, font, "left", "center")
+        dxDrawText(v[6] and v[8] .. (getTickCount() - tick < 500 and "|" or "") or (v[8] == "" and v[1]) or v[8], v[2] + 6, v[3] + 6, v[2] + v[4] - 6, v[3] + v[5] - 6, tocolor(255, 255, 255, (v[6] or v[8] ~= "") and 200 or 100), 1, font, "left", "center", true)
     end
 end)
 
@@ -29,7 +29,7 @@ addEventHandler("onClientKey", getRootElement(), function(key, press)
                 tick = getTickCount()
                 start = tick
                 v[7][2] = v[7][1]
-                v[7][3] = 250
+                v[7][3] = v[4]
                 v[6] = true
             end
         end
