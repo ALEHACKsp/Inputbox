@@ -40,5 +40,4 @@ setTimer(function()
     outputChatBox(exports.inputbox:getInputBoxText(username))
     exports.inputbox:removeInputBox(username)
 end, 5000, 1)
-
 ```
